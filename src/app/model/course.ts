@@ -1,4 +1,4 @@
-
+//register MOdel
 
 export interface Course {
     id:number;
