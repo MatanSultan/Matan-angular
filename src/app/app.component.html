@@ -1,0 +1,99 @@
+
+<mat-sidenav-container fullscreen dir="rtl"> 
+
+    <mat-sidenav #sidenav style="background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);">
+
+        <mat-nav-list (click)="sidenav.close()" >
+            
+
+            <a mat-list-item routerLink="">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+
+                <span>דף הבית </span>
+            </a>
+
+            <a mat-list-item routerLink="about">
+                <mat-icon>question_answer</mat-icon>
+                <span>אודות </span>
+            </a>
+
+            <a mat-list-item routerLink="drag-drop-example">
+                <mat-icon>drag_indicator</mat-icon>
+                <span>משימות </span>
+            </a>
+
+            <a mat-list-item routerLink="recommendation">
+                <span class="material-icons">sentiment_satisfied_alt</span>
+                <span> המלצות</span>
+            </a>
+
+            <a mat-list-item routerLink="important-to-know">
+                <mat-icon>import_export</mat-icon>
+                <span>חשוב לדעת  </span>
+            </a>
+
+            <a mat-list-item routerLink="/register"> 
+                <mat-icon routerLink="/register"
+                [matTooltip]="' הרשמה'" matTooltipPosition="above"
+                [matTooltipShowDelay]="1000"
+                [matTooltipHideDelay]="2000"
+                [matTooltipDisabled]="true">    person_add</mat-icon>
+                <span>הרשמה</span>
+            </a>
+
+            <a mat-list-item routerLink="login">
+                <mat-icon>account_circle</mat-icon>
+                <span>התחברות</span>
+            </a>
+
+        </mat-nav-list>
+
+
+    </mat-sidenav>
+
+
+    <mat-toolbar color="primary" style="background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,16,126,1) 15%, rgba(9,9,121,1) 26%, rgba(5,90,175,1) 72%, rgba(0,212,255,1) 100%);">
+        <span><img src="../../favicon.ico" routerLink="**" width="50px"></span>
+        <button mat-icon-button (click)="sidenav.open()">
+            <mat-icon>dashboard</mat-icon>
+        </button>
+
+        <a mat-button [matMenuTriggerFor]="dropdown">
+            מדריכים
+        </a>
+
+        <mat-menu #dropdown>
+
+            <button mat-menu-item routerLink="/">אילוף</button>
+
+            <button mat-menu-item routerLink="/about">אורח חיים בריא </button>
+            <button mat-menu-item routerLink="/about">תזונה </button>
+            <button mat-menu-item routerLink="/about">.... </button>
+
+        </mat-menu>
+
+
+        <a mat-button routerLink="/register"
+        [matTooltip]="' הרשמה'" matTooltipPosition="above"
+        [matTooltipShowDelay]="1000"
+        [matTooltipHideDelay]="2000"
+        [matTooltipDisabled]="true"> 
+            <mat-icon>person_add</mat-icon>
+            הרשמה
+        </a>
+
+        <a mat-button routerLink="login">
+            <mat-icon >account_circle</mat-icon>
+            התחברות
+        </a>
+
+    </mat-toolbar>
+
+
+    <router-outlet></router-outlet>
+
+
+</mat-sidenav-container>
+
