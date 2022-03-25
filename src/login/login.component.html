@@ -1,0 +1,39 @@
+
+<br>
+<br>
+<DIV class="LOGIN" dir="rtl">
+    <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center" dir="rtl">
+        <mat-card class="box">
+          <mat-card-header>
+            <mat-card-title>התחברות</mat-card-title>
+          </mat-card-header>
+          <form class="example-form">
+            <mat-card-content>
+              <mat-form-field class="example-full-width">
+                <form class="example-form">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label>פלאפון</mat-label>
+                      <span matPrefix> &nbsp;</span>
+                      <input type="tel" matInput placeholder="050-2555-555">
+                      <mat-icon matSuffix>mode_edit</mat-icon>
+                    </mat-form-field>
+                  </form>
+                  
+              </mat-form-field>
+              <div class="example-container">
+                <mat-form-field appearance="fill" class="example-full-width">
+                  <mat-label>הזן סיסמא </mat-label>
+                  <input matInput [type]="hide ? 'password' : 'text'">
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                </mat-form-field>
+                </div>
+
+            </mat-card-content>
+            <button mat-stroked-button style="background: rgb(238,174,202);
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);" class="btn-block" >התחבר</button>
+          </form>
+        </mat-card>
+      </div>
+</DIV>
